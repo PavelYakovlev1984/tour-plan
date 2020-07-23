@@ -14,7 +14,7 @@
         padding-bottom: 30px
       &__search
         margin-left: auto
-        max-width: 340px
+        
   .navbar
     &-menu
       padding-top: 22px
@@ -22,7 +22,13 @@
       &__link
         font-size: 12px
         line-height: 15px
-
+  .search
+    &__input
+      width: 340px
+@media (max-width: 768px)
+  .container
+    max-width: 576px
+    width: 92%
   .navbar
     &-menu, &__search, &__user
       display: none
@@ -38,6 +44,7 @@
       border: none
       background-color: #fff
       cursor: pointer
+      padding: 0
       &__line
         width: 16px
         height: 1px
@@ -45,6 +52,9 @@
 @media (max-width: 576px)
   .logo
     width: 99px
+@media (max-width: 320px)
+  .logo
+    width: 89px
   
 
         
