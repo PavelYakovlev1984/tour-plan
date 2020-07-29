@@ -11,3 +11,11 @@ var mySwiper = new Swiper('.swiper-container', {
 
  /* effect: "cube", */
 })
+$(document).ready(function(){
+$( "input" ).keyup(function(){
+
+});
+
+
+
+});
