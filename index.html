@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <script src="https://api-maps.yandex.ru/2.1?apikey=50a5a39c-34d3-43e0-9dfb-c8c1a377ba03&load=package.full&lang=ru_RU">
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map("YMapsID", {
+        center: [55.76, 37.64],
+        zoom: 10
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -177,8 +187,7 @@
             <button class="button booking__button">View Other Options</button>
           </div>
           <!-- /.booking -->
-          <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3952.5417637833007!2d98.2972914!3d7.8382241!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1596042400846!5m2!1sru!2sru" width="100%" height="213" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          </div>
+          <div class="map" id="YMapsID" style="width: 100%; height: 213px;"></div>
           <!-- /.map -->
         </div>
         <!-- /.hotel-right -->
