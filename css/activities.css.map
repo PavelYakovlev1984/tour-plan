@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,GAAG;EACrB,OAAO,EAAE,aAAa;CAAG",
+    "sources": [
+        "../sass/blocks/activities.sass"
+    ],
+    "names": [],
+    "file": "activities.css"
+}
