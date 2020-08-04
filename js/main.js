@@ -1,38 +1,27 @@
-var mySwiper = new Swiper('.swiper-container', { 
-  // Optional parameters
-  
-  /* var mySwiper = new Swiper ( '.swiper-container' , { keyboard : { */
+var hotelSlider = new Swiper('.hotel-slider', { 
+ 
     keyboard: {
-    nextEl: '.slider-button--next',
-    prevEl: '.slider-button--prev',
+    nextEl: '.hotel-slider__button--next',
+    prevEl: '.hotel-slider__button--prev',
   },
-
-
-
 
   loop: true,
   enabled: true,
   
   pageUpDown: true,
 
-  // Navigation arrows
+});
+var reviewsSlider = new Swiper('.reviews-slider', { 
  
+    keyboard: {
+    nextEl: '.reviews-slider__button--next',
+    prevEl: '.reviews-slider__button--prev',
+  },
 
- /* effect: "cube", */
-/* })
-$(document).ready(function(){
-$( "input" ).keyup(function(){
-
-}); */
-
-
+  loop: true,
+  enabled: true,
+  
+  pageUpDown: true,
 
 });
 
-/* var mySwiper = new Swiper('.swiper-container', {
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    pageUpDown: true,
-  }, */
-/* }); */
