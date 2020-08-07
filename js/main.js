@@ -52,5 +52,30 @@ function closeModal(event){
   modalDialog.removeClass('modal__dialog--visible');
 }
 
-
+// Обработка форм
+$(".form").each(function(){
+    $(this).validate({
+      errorClass: "invalid",
+    
+      messages: {
+        name: {
+          required: "Укажитe имя",
+          minlenght: "Имя должно быть не короче двух букв"},
+        email: {
+          required: "Введите свой email",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+           required: "Телефон обязателен",
+        },
+    
+      },
+    });
 });
+
+  
+});
+
+
+
+/* }); */

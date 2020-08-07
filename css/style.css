@@ -46,6 +46,7 @@ img {
   background-color: #EC1F46;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .form {
@@ -60,6 +61,11 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.invalid {
+  color: #EC1F46;
+  border-bottom: 1px solid #EC1F46;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1309,6 +1315,10 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1372,6 +1382,19 @@ template {
   height: 22px;
 }
 
+.footer__button-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .modal__overlay {
   position: fixed;
   left: 0;
@@ -1433,12 +1456,17 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
+  margin-top: 15px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1447,6 +1475,12 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #bdbdbd;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .modal__button-info {
@@ -1457,6 +1491,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -1476,7 +1511,7 @@ template {
     width: 230px;
     height: 230px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1550,9 +1585,9 @@ template {
         grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
   }
-  .footer__input {
-    -ms-flex-preferred-size: 49%;
-        flex-basis: 49%;
+  .footer__input-group {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
   }
   .footer__logo {
     -ms-grid-row: 1;
@@ -1768,7 +1803,7 @@ template {
     padding-top: 40px;
     padding-bottom: 60px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1881,6 +1916,10 @@ template {
   }
   .footer__information-blok {
     left: 0;
+  }
+  .footer__input-group {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
