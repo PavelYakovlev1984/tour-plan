@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <script src="https://api-maps.yandex.ru/2.1?apikey=50a5a39c-34d3-43e0-9dfb-c8c1a377ba03&load=package.full&lang=ru_RU">
-  </script>
+  <!-- <script src="https://api-maps.yandex.ru/2.1?apikey=50a5a39c-34d3-43e0-9dfb-c8c1a377ba03&load=package.full&lang=ru_RU">
+  </script> -->
   <!-- <script type="text/javascript">
     ymaps.ready(function () {
       var myMap = new ymaps.Map("YMapsID", {
@@ -68,7 +68,7 @@
           </button>
         </form>
         <a href="#" class="user navbar__user navbar__user--mobile_hidden" data-aos="fade-right" data-aos-delay="300">
-          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
+          <img src="img/user-avatar.jpg" loading="lazy" alt="Avatar: Nathan" class="user__avatar">
           <span class="user__name">Nathan</span>
         </a>
 
@@ -190,11 +190,11 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
       
-      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide.jpg" alt="slide"></div>
-      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide2.jpeg" alt="slide2"></div>
-      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide3.jpeg" alt="slide3"></div>
-      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide4.jpg" alt="slide4"></div>
-      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide5.jpg" alt="slide5"></div>
+      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide.jpg" loading="lazy" alt="slide"></div>
+      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide2.jpeg" loading="lazy" alt="slide2"></div>
+      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide3.jpeg" loading="lazy" alt="slide3"></div>
+      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide4.jpg" loading="lazy" alt="slide4"></div>
+      <div class="swiper-slide hotel-slider__item"><img class="hotel-slider__image" src="img/slide5.jpg" loading="lazy" alt="slide5"></div>
       ...
   </div>
  
@@ -216,7 +216,7 @@
               <!-- /booking__price -->
               <div class="booking__room">
                 <div class="booking__text">
-                  <img src="img/user.svg" alt="Icon: user" class="booking__icon">
+                  <img src="img/user.svg" loading="lazy" alt="Icon: user" class="booking__icon">
                   <span class="booking__description">2 x Guests</span>
                 </div>
                 <div class="booking__text">
@@ -253,9 +253,9 @@
         subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
-      <form action="#" class="subscribe newsletter__subscribe">
-        <input type="text" class="subscribe__input" placeholder="Your email address">
-        <button class="subscribe__button">
+      <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+        <input  required type="text" class="subscribe__input" placeholder="Your email address">
+        <button  class="subscribe__button">
           Send
         </button>
       </form>
@@ -341,7 +341,7 @@
           <img src="img/activity-1.jpg" alt="The curious corner 
           of chamarel" class="card__image">
           <h3 class="card__title">The curious corner <br/> of chamarel</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card activities__card" data-aos="fade-right" data-aos-delay="300">
@@ -349,7 +349,7 @@
           course" class="card__image">
           <h3 class="card__title">Gymkhana club golf
             course</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card activities__card" data-aos="fade-right" data-aos-delay="500">
@@ -361,7 +361,7 @@
             trip - full day
             
             </h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card activities__card" data-aos="fade-right" data-aos-delay="700">
@@ -369,7 +369,7 @@
           quest" class="card__image">
           <h3 class="card__title">The blue marine discovery
             quest</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
       </div>
@@ -461,12 +461,15 @@
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
             <form action="send.php" method="POST" class="footer-form form">
+             <div class="footer__inputs">
               <div class="footer__input-group">
                 <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required>
               </div>
               <div class="footer__input-group">
                 <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone" required>
               </div>
+             </div>
+             <!-- /.footer__inputs -->
               
               <textarea class="message footer__message"  placeholder="Message" name="message"></textarea>
               
@@ -494,7 +497,7 @@
     </div>
     <!-- /.container -->
   </footer>
-  <div class="modal">
+  <div class="modal"> 
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">

@@ -1269,6 +1269,13 @@ template {
   flex-wrap: wrap;
 }
 
+.footer__inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .modal__overlay {
   position: fixed;
   left: 0;
@@ -1386,8 +1393,14 @@ template {
     width: 230px;
     height: 230px;
   }
+  .footer__input {
+    width: 100%;
+  }
   .footer__input-group {
-    flex-basis: 100%;
+    width: 100%;
+  }
+  .footer__inputs {
+    flex-direction: column;
   }
 }
 
@@ -1450,6 +1463,10 @@ template {
   .footer-wrapper {
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
+  }
+  .footer__inputs {
+    width: 100%;
+    flex-direction: row;
   }
   .footer__input-group {
     flex-basis: 48%;
@@ -1624,7 +1641,7 @@ template {
     padding-bottom: 60px;
   }
   .footer__input-group {
-    flex-basis: 100%;
+    flex-basis: 48%;
   }
   .footer__author {
     position: absolute;
@@ -1719,7 +1736,10 @@ template {
   .footer__information-blok {
     left: 0;
   }
-  .footer__input-group {
+  .footer__inputs {
+    flex-direction: column;
+  }
+  .footer__inputs-group {
     flex-basis: 100%;
   }
   .subscribe {
