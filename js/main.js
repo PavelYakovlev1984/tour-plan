@@ -190,7 +190,7 @@ const maskPhone = (
   eventListeners();
 };
 
-maskPhone('.modal__input', '#000')
+maskPhone('.modal__phone', '#000')
 
 
 
